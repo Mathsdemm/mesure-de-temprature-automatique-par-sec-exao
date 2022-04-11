@@ -1,11 +1,14 @@
 {
-    "name": "Mesure de température automatique  par sec ExAO",
+    "name": "TP changement d'état d'un corps pur",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "datalogger": "*"
+        "datalogger": "*",
+        "Grove": "github:seeed-studio/pxt-grove#v0.5.0",
+        "BMP280": "github:makecode-extensions/bmp280#v1.1.0",
+        "microbit-dstemp": "github:bsiever/microbit-dstemp#v0.1.26"
     },
     "files": [
         "main.blocks",
@@ -20,7 +23,7 @@
         "branch": "v4.0.7",
         "tag": "v4.0.7",
         "commits": "https://github.com/microsoft/pxt-microbit/commits/94ebe7ecc1280fbc0dd956ec68955bd887f78d61",
-        "target": "4.1.14",
+        "target": "4.1.17",
         "pxt": "7.0.5",
         "targetId": "microbit"
     },

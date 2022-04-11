@@ -11,14 +11,14 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.showString("effacement données")
+    basic.showString("clear")
     datalogger.deleteLog()
 })
 let enregistrer = false
 enregistrer = false
-datalogger.setColumns(["temperature"])
-loops.everyInterval(1000, function () {
+datalogger.setColumns(["temprerature"])
+loops.everyInterval(60000, function () {
     if (enregistrer) {
-        datalogger.logData([datalogger.createCV("temperature", input.temperature())])
+        datalogger.logData([datalogger.createCV("temperature", dstemp.celsius(DigitalPin.P1))])
     }
 })

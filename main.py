@@ -20,9 +20,9 @@ input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
 enregistrer = False
 enregistrer = False
-datalogger.set_columns(["temperature"])
+datalogger.set_columns(["temprerature"])
 
 def on_every_interval():
     if enregistrer:
-        datalogger.log_data([datalogger.create_cv("temperature", input.temperature())])
+        datalogger.log_data([datalogger.create_cv("temperature", dstemp.celsius(DigitalPin.P1))])
 loops.every_interval(1000, on_every_interval)
