@@ -16,7 +16,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 let enregistrer = false
 enregistrer = false
-datalogger.setColumns(["temprerature"])
+datalogger.setColumns(["temperature"])
 loops.everyInterval(60000, function () {
     if (enregistrer) {
         datalogger.logData([datalogger.createCV("temperature", dstemp.celsius(DigitalPin.P1))])
