@@ -1,5 +1,5 @@
 {
-    "name": "TP changement d'état d'un corps pur",
+    "name": "TP Mesure effet de serre.",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -23,7 +23,7 @@
         "branch": "v4.0.7",
         "tag": "v4.0.7",
         "commits": "https://github.com/microsoft/pxt-microbit/commits/94ebe7ecc1280fbc0dd956ec68955bd887f78d61",
-        "target": "4.1.17",
+        "target": "6.1.8",
         "pxt": "7.0.5",
         "targetId": "microbit"
     },

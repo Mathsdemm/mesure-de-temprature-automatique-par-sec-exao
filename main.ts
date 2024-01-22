@@ -4,11 +4,6 @@ datalogger.onLogFull(function () {
 })
 input.onButtonPressed(Button.A, function () {
     enregistrer = !(enregistrer)
-    if (enregistrer) {
-        basic.showIcon(IconNames.Heart)
-    } else {
-        basic.clearScreen()
-    }
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showString("clear")
@@ -19,6 +14,15 @@ enregistrer = false
 datalogger.setColumns(["temperature"])
 loops.everyInterval(60000, function () {
     if (enregistrer) {
-        datalogger.logData([datalogger.createCV("temperature", dstemp.celsius(DigitalPin.P1))])
+        datalogger.logData([datalogger.createCV("T1", dstemp.celsius(DigitalPin.P0)), datalogger.createCV("T2", dstemp.celsius(DigitalPin.P1))])
+    }
+})
+loops.everyInterval(60000, function () {
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+    if (enregistrer) {
+        basic.showNumber(dstemp.celsius(DigitalPin.P0))
+        basic.clearScreen()
+        basic.showNumber(dstemp.celsius(DigitalPin.P1))
+        basic.clearScreen()
     }
 })
